@@ -1,18 +1,22 @@
 title: "alog"
-description: "A minimal blog powered by Jekyll"
+description: "AI 技术研究博客，聚焦人工智能领域的前沿进展与深度分析。"
 baseurl: "/alog"
 url: "https://gujiaxi.github.io"
+author: "AI Research"
 
 theme: minima
 
-# Minima skin: classic / solarized / solarized-dark / dark
 minima:
   skin: classic
+  date_format: "%Y-%m-%d"
+  social_links: []
 
 # Build
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
+
+show_excerpts: true
 
 exclude:
   - README.md
