@@ -5,11 +5,12 @@ date: 2026-03-05
 tags: [markdown, meta, jekyll]
 ---
 
-本文用于测试博客的Markdown渲染效果，涵盖常用元素。
+本文用于测试博客的Markdown渲染效果，涵盖常用元素。[^intro]
+
+[^intro]: 本文为功能测试文章，持续更新。
 
 ## 标题层级
 
-# H1 一级标题
 ## H2 二级标题
 ### H3 三级标题
 #### H4 四级标题
@@ -74,10 +75,6 @@ class SelfAttention(nn.Module):
 代码块（Bash）：
 
 ```bash
-# 安装依赖
-pip install torch transformers accelerate
-
-# 启动训练
 torchrun --nproc_per_node=8 train.py \
   --model_name_or_path meta-llama/Llama-3-8B \
   --output_dir ./output \
@@ -86,11 +83,13 @@ torchrun --nproc_per_node=8 train.py \
 
 ---
 
-## 引用
+## 引用块
 
-> "Scaling laws suggest that model performance improves predictably with compute, data, and parameters."
+> "Scaling laws suggest that model performance improves predictably with compute, data, and parameters."[^kaplan]
 >
-> — Kaplan et al., *Scaling Laws for Neural Language Models*, 2020
+> — Kaplan et al., 2020
+
+[^kaplan]: Kaplan, J. et al. (2020). *Scaling Laws for Neural Language Models*. arXiv:2001.08361.
 
 多层引用：
 
@@ -116,7 +115,7 @@ torchrun --nproc_per_node=8 train.py \
 
 外部链接：[arXiv cs.AI](https://arxiv.org/list/cs.AI/recent)
 
-图片（来自Wikimedia）：
+图片：
 
 ![Transformer Architecture](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The-Transformer-model-architecture.png/400px-The-Transformer-model-architecture.png)
 
@@ -124,13 +123,28 @@ torchrun --nproc_per_node=8 train.py \
 
 ## 数学公式
 
-Attention计算公式：
+块级公式——Attention计算：
 
-$$
+\\[
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
-$$
+\\]
 
-行内公式：模型复杂度为$O(n^2 \cdot d)$，其中$n$为序列长度，$d$为隐层维度。
+Softmax定义：
+
+\\[
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+\\]
+
+行内公式：模型复杂度为\\(O(n^2 \cdot d)\\)，其中\\(n\\)为序列长度，\\(d\\)为隐层维度。
+
+---
+
+## 脚注引用
+
+Transformer架构[^transformer]由Vaswani等人于2017年提出，彻底改变了NLP领域的研究范式。其核心是自注意力机制[^attention]，使模型能够并行处理序列中的所有位置。
+
+[^transformer]: Vaswani, A. et al. (2017). *Attention Is All You Need*. NeurIPS 2017. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
+[^attention]: 自注意力（Self-Attention）允许序列中每个位置直接关注所有其他位置，计算复杂度为\\(O(n^2)\\)。
 
 ---
 
@@ -141,9 +155,6 @@ $$
 - [x] 切换Minima主题
 - [x] 修复MathJax渲染
 - [x] 新增Archive页面
+- [x] 加入脚注示例
 - [ ] 添加tag索引页
 - [ ] 配置自定义域名
-
----
-
-以上覆盖了博客写作中最常用的Markdown元素，可用于验证主题渲染是否正常。
