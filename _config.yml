@@ -3,18 +3,22 @@ description: "A minimal blog powered by Jekyll"
 baseurl: "/alog"
 url: "https://gujiaxi.github.io"
 
+theme: minima
+
+# Minima skin: classic / solarized / solarized-dark / dark
+minima:
+  skin: classic
+
 # Build
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
-# Exclude
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
