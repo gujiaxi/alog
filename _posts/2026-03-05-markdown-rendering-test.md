@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Markdown 渲染测试"
+title: "Markdown渲染测试"
 date: 2026-03-05
 tags: [markdown, meta, jekyll]
 ---
 
-本文用于测试博客的 Markdown 渲染效果，涵盖常用元素。
+本文用于测试博客的Markdown渲染效果，涵盖常用元素。
 
 ## 标题层级
 
@@ -18,9 +18,9 @@ tags: [markdown, meta, jekyll]
 
 ## 段落与强调
 
-普通段落文本，支持中英文混排。AI 领域的发展日新月异，large language models（LLMs）正在重塑软件开发范式。
+普通段落文本，支持中英文混排。AI领域的发展日新月异，large language models（LLMs）正在重塑软件开发范式。
 
-**粗体文本** 用于强调重要内容，*斜体文本* 用于术语或书名，~~删除线~~ 用于标注过时信息。
+**粗体文本**用于强调重要内容，*斜体文本*用于术语或书名，~~删除线~~用于标注过时信息。
 
 ---
 
@@ -28,11 +28,11 @@ tags: [markdown, meta, jekyll]
 
 ### 无序列表
 
-- Transformer 架构
+- Transformer架构
 - Diffusion Model
 - Autoregressive Generation
-  - GPT 系列
-  - LLaMA 系列
+  - GPT系列
+  - LLaMA系列
 
 ### 有序列表
 
@@ -116,7 +116,7 @@ torchrun --nproc_per_node=8 train.py \
 
 外部链接：[arXiv cs.AI](https://arxiv.org/list/cs.AI/recent)
 
-图片（来自 Wikimedia）：
+图片（来自Wikimedia）：
 
 ![Transformer Architecture](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The-Transformer-model-architecture.png/400px-The-Transformer-model-architecture.png)
 
@@ -124,31 +124,26 @@ torchrun --nproc_per_node=8 train.py \
 
 ## 数学公式
 
-Jekyll + kramdown 支持 MathJax，但需在配置中开启。以下为 LaTeX 格式示例（如已开启则可正常渲染）：
-
-Attention 计算公式：
+Attention计算公式：
 
 $$
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
 $$
 
-行内公式：模型复杂度为 $O(n^2 \cdot d)$，其中 $n$ 为序列长度，$d$ 为隐层维度。
-
----
-
-## 分隔线
+行内公式：模型复杂度为$O(n^2 \cdot d)$，其中$n$为序列长度，$d$为隐层维度。
 
 ---
 
 ## 任务列表
 
-- [x] 搭建 Jekyll 博客
-- [x] 配置 GitHub Pages
-- [x] 切换 Minima 主题
-- [ ] 添加 tag 索引页
+- [x] 搭建Jekyll博客
+- [x] 配置GitHub Pages
+- [x] 切换Minima主题
+- [x] 修复MathJax渲染
+- [x] 新增Archive页面
+- [ ] 添加tag索引页
 - [ ] 配置自定义域名
-- [ ] 开启 MathJax 支持
 
 ---
 
-以上覆盖了博客写作中最常用的 Markdown 元素，可用于验证主题渲染是否正常。
+以上覆盖了博客写作中最常用的Markdown元素，可用于验证主题渲染是否正常。

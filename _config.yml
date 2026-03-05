@@ -1,5 +1,5 @@
-title: "alog"
-description: "AI 技术研究博客，聚焦人工智能领域的前沿进展与深度分析。"
+title: "Alog"
+description: "人工智能领域技术研究博客。"
 baseurl: "/alog"
 url: "https://gujiaxi.github.io"
 author: "AI Research"
@@ -11,8 +11,11 @@ minima:
   date_format: "%Y-%m-%d"
   social_links: []
 
-# Build
+# MathJax
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
