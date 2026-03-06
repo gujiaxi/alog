@@ -83,7 +83,37 @@ for s in list(d.values())[0]['data']['screenshots'][:3]:
 "
 ```
 
-其他来源：Nintendo官方媒体资源、官方press kit图
+**Switch独占游戏 → Nintendo eShop CDN**（适用于无Steam版的游戏，如风花雪月、宝可梦等）
+
+Step 1：用Nintendo JP搜索API拿图片哈希：
+```bash
+curl -s "https://search.nintendo.jp/nintendo_soft/search.json?q=<游戏名（日文或英文）>&limit=1&opt_os_type=switch" \
+  -H "User-Agent: Mozilla/5.0"
+```
+返回字段：
+- `iurl` → 封面图哈希
+- `sslurl` → 局内截图哈希列表（通常6张）
+
+Step 2：拼接CDN地址：
+```
+https://img-eshop.cdn.nintendo.net/i/{hash}.jpg
+```
+
+完整脚本：
+```bash
+curl -s "https://search.nintendo.jp/nintendo_soft/search.json?q=<游戏名>&limit=1&opt_os_type=switch" \
+  -H "User-Agent: Mozilla/5.0" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+item=d['result']['items'][0]
+base='https://img-eshop.cdn.nintendo.net/i/'
+print('封面:', base+item['iurl']+'.jpg')
+for h in item.get('sslurl',[]):
+    print('截图:', base+h+'.jpg')
+"
+```
+
+其他来源：Nintendo官方press kit图
 
 **技术/研究类文章 → arXiv HTML页或项目主页**（优先级排序）
 
