@@ -2,7 +2,7 @@
 layout: post
 title: "银河与恶魔城：同名之下的两种哲学"
 date: 2026-03-06
-tags: [gaming, metroidvania]
+tags: [gaming, design]
 ---
 
 "银河恶魔城"（Metroidvania）这个词，把两款游戏的名字拼在了一起——任天堂的《密特罗德》（Metroid）和科乐美的《恶魔城》（Castlevania）。这个复合词的诞生，默认了两者拥有共同的DNA：非线性地图、能力解锁、回溯探索。

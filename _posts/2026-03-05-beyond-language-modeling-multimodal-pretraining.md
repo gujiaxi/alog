@@ -2,7 +2,7 @@
 layout: post
 title: "超越语言建模：多模态预训练的系统性探索"
 date: 2026-03-05
-tags: [multimodal, pretraining, MoE, world-model, scaling-laws]
+tags: [AI, research]
 ---
 
 > **论文**：Beyond Language Modeling: An Exploration of Multimodal Pretraining
