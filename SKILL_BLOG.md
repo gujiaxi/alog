@@ -1,16 +1,6 @@
 # SKILL_BLOG.md — 博客写作指南
 
-记录如何为 [gujiaxi/alog](https://github.com/gujiaxi/alog) 撰写高质量文章的方法论，**仅涉及文章内容与格式本身**，不涉及网站搭建、主题、样式修改等。
-
----
-
-## 博客基本信息
-
-- **仓库**：https://github.com/gujiaxi/alog
-- **Pages URL**：https://gujiaxi.github.io/alog
-- **本地clone**：`/root/.openclaw/workspace/alog-repo`
-- **主题**：Minima (classic skin)，Jekyll驱动
-- **定位**：个人兴趣博客，涵盖AI技术、游戏、设计思考等
+记录为 alog 撰写高质量文章的方法论，**仅涉及文章内容与格式本身**，不涉及网站搭建、主题、样式修改等。
 
 ---
 
@@ -73,7 +63,7 @@ tags: [tag1, tag2]
 
 ## 四、图片处理
 
-**不要**把图片放进仓库。
+**不要**把图片放进仓库，统一使用外部直链。
 
 ### 图片来源（按文章类型）
 
@@ -168,7 +158,7 @@ def example():
 
 ## 九、语言风格
 
-- **中英文之间不加空格**（isaacgu明确要求）
+- **中英文之间不加空格**
 - 行文简洁，不堆砌形容词
 - 游戏名/专有名词首次出现时可附英文原名，之后不必重复
 - 对话式口吻比学术口吻更适合这个博客
@@ -211,7 +201,6 @@ def example():
 ## 十二、推送流程
 
 ```bash
-cd /root/.openclaw/workspace/alog-repo
 git add _posts/YYYY-MM-DD-slug.md
 git commit -m "Add post: <简短描述>"
 git push
