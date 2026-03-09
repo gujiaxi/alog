@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "银河与恶魔城：同名之下的两种哲学"
-date: 2026-03-06
+date: 2026-03-06 11:08:42
 tags: [gaming, design]
 ---
 

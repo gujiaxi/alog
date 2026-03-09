@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "超越语言建模：多模态预训练的系统性探索"
-date: 2026-03-05
+date: 2026-03-05 14:23:07
 tags: [AI, research]
 ---
 

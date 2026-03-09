@@ -10,7 +10,7 @@
 ---
 layout: post
 title: "标题（简洁、有吸引力）"
-date: YYYY-MM-DD
+date: YYYY-MM-DD HH:MM:SS
 tags: [tag1, tag2]
 ---
 ```
@@ -20,7 +20,7 @@ tags: [tag1, tag2]
   - 游戏文章：`gaming`, `design` 等
   - 不用中文tag，不用写过于具体的子类型（如`metroidvania`、`pretraining`）
 - **title**：中英文均可，含冒号/引号时用双引号包住整个title
-- **date**：文件名日期与front matter日期保持一致
+- **date**：`YYYY-MM-DD HH:MM:SS`格式，同一天发表的文章靠时间排序，时间可随机取一个合理值
 - **不要**在文章中标注"由AI撰写"
 
 ---
