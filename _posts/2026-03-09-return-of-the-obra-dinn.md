@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "死亡的形状：《奥伯拉丁的回归》三维度鉴赏"
+title: "死亡的形状：你只能看见那一刻"
 date: 2026-03-09
 tags: [gaming, design]
 ---
