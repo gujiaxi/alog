@@ -217,7 +217,64 @@ def example():
 
 ---
 
-## 十一、发布前自检
+## 十一、AI写作套路避雷清单
+
+来源：[tropes.fyi](https://tropes.fyi) by ossama.is（[Gist](https://gist.github.com/ossa-ma/f3baa9d25154c33095e22272c631f5a1)）。以下模式**单次使用可能无害，但堆叠或反复使用就是AI味的标志**。写完文章后逐条自查。
+
+### 用词（Word Choice）
+
+- **"quietly"类魔法副词**：用"quietly""deeply""fundamentally""remarkably"给平淡描述注入虚假深意
+- **"delve"及其同族**：delve、certainly、utilize、leverage、robust、streamline、harness — AI高频词汇表
+- **"tapestry""landscape"**：用华丽名词替代简单词。还有paradigm、synergy、ecosystem、framework
+- **"serves as"回避简单动词**：用"serves as""stands as""represents"替代简单的"is"，因为AI的重复惩罚机制推它选更花哨的表达
+
+### 句式（Sentence Structure）
+
+- **否定平行句 "It's not X — it's Y"**：最常见的AI写作标志。伪深刻的重构句式，偶尔一次有效，反复使用是对读者的侮辱。变体包括"not because X, but because Y"和跨句否定
+- **"Not X. Not Y. Just Z."**：戏剧性倒计时，否定两件事再揭示真相
+- **"The X? A Y."**：自问自答修辞问句，问一个没人在问的问题然后自己回答
+- **排比滥用（Anaphora）**：同一句式开头反复出现。"They could... They could... They could..."
+- **三段式滥用（Tricolon）**：万物三连。一个三段式优雅，三个三段式背靠背是模式识别失败
+- **"It's worth noting"**：空洞过渡词，还有"Importantly""Interestingly""Notably"
+- **浅层分析短语**：句末缀一个"-ing"短语假装深入，如"highlighting its importance""reflecting broader trends"
+- **虚假范围 "from X to Y"**：X和Y根本不在同一尺度上。"From innovation to cultural transformation" — 中间是什么？什么都没有
+
+### 段落（Paragraph Structure）
+
+- **短句碎片化**：极短句单独成段制造虚假紧迫感。"He published this. Openly. In a book. As a priest." — 没有正常人这样写初稿
+- **伪装成散文的列表**：本质是listicle但用"The first... The second... The third..."包装成连续段落
+
+### 语气（Tone）
+
+- **"Here's the kicker"**：虚假悬念过渡，承诺揭秘但交付的是平庸观察。还有"Here's the thing""Here's where it gets interesting"
+- **"Think of it as..."**：居高临下的比喻，默认读者需要简化类比才能理解。产出的比喻往往比原概念更难懂
+- **"Imagine a world where..."**：AI式未来主义开场白
+- **虚假脆弱感**：模拟自省或坦诚，实际毫无风险。"And yes, I'm openly in love with..."
+- **"The truth is simple"**：断言某事显而易见而不是去证明它。如果你需要告诉读者你的观点很清楚，它很可能不清楚
+- **夸大利害**：一切都是史上最重要的事。API定价的博客写成文明命运的沉思
+- **"Let's break this down"**：说教式口吻，假设读者需要手把手引导。还有"Let's unpack this""Let's dive in"
+- **模糊归因**：引用不具名的"experts""observers""industry reports"。如果你说不出专家是谁，你就没有来源
+- **杜撰概念标签**：在领域词后附加"paradox""trap""creep""divide"，伪装成成熟术语。"the supervision paradox""the acceleration trap"
+
+### 格式（Formatting）
+
+- **破折号上瘾**：正常人一篇用2-3个，AI用20+
+- **加粗开头列表**：每个列表项都以粗体短语开头，是AI生成文档/博客/README的典型标志
+- **Unicode装饰**：→ 箭头、弯引号等键盘上打不出来的字符。真正写字的人产出的是 -> 和直引号
+
+### 篇章（Composition）
+
+- **分形式总结**：每小节总结一次，每大节再总结一次，全文再总结一次。"What I'm going to tell you; what I'm telling you; what I just told you"
+- **死磕一个比喻**：一个比喻用5-10次贯穿全文。正常人引入比喻，用完就走
+- **历史类比堆叠**：快速列举历史公司/技术革命建立虚假权威。"Apple didn't build Uber. Facebook didn't build Spotify..."
+- **单点稀释**：一个论点换10种说法扩充到4000字。800字能讲清楚的事不需要圆形重复
+- **内容重复**：逐字重复整段内容，长文中模型丢失上下文的标志
+- **显式收尾**：用"In conclusion""To sum up""In summary"宣告结尾。好文章不需要告诉你它在收尾
+- **"Despite its challenges..."**：僵化公式 — 承认问题然后立刻驳回。"Despite these challenges, the initiative continues to thrive."
+
+---
+
+## 十二、发布前自检
 
 - [ ] Front matter：`layout`, `title`, `date`, `tags` 齐全
 - [ ] 图片URL均可访问（`curl -I <url>` 验证）
@@ -228,7 +285,7 @@ def example():
 
 ---
 
-## 十二、推送流程
+## 十三、推送流程
 
 ```bash
 git add _posts/YYYY-MM-DD-slug.md
