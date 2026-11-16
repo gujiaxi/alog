@@ -38,12 +38,10 @@ body {
   padding: $spacing-unit * 1.25 0 $spacing-unit * 2;
 }
 
-// footer is just an end mark
 .site-footer {
-  border-top: 0;
-  padding: 0 0 $spacing-unit * 1.5;
-  text-align: center;
-  font-size: 1.4rem;
+  border-top: 1px solid $border-color-01;
+  padding: $spacing-unit * .75 0;
+  font-size: .85rem;
   color: $brand-color;
 }
 
