@@ -197,20 +197,178 @@ a {
     padding-left: 1em;
   }
 
-  img { border-radius: 2px; }
-
   hr {
     border: 0;
     border-top: 1px solid $border-color-01;
     margin: 2.2em auto;
     width: 40%;
   }
+
+  // ---------- Images & captions ----------
+  // Two caption forms are supported:
+  //   ![alt](url)            ![alt](url)
+  //   *说明*                  (blank line)
+  //                          *说明*
+  img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+
+  p:has(> img) {
+    margin: 1.8em 0 1.4em;
+    text-align: center;
+  }
+
+  // caption in the same paragraph as the image
+  p:has(> img) > em,
+  // caption as the paragraph right after the image
+  p:has(> img) + p:has(> em:only-child) {
+    display: block;
+    margin: .7em auto 0;
+    max-width: 34em;
+    text-align: center;
+    font-style: normal;
+    font-size: .84em;
+    line-height: 1.65;
+    color: $brand-color;
+  }
+  p:has(> img) + p:has(> em:only-child) {
+    margin-top: -.9em;
+    margin-bottom: 1.8em;
+    em { font-style: normal; }
+  }
+
+  figure {
+    margin: 1.8em 0;
+    text-align: center;
+  }
+  figcaption {
+    margin-top: .7em;
+    font-size: .84em;
+    color: $brand-color;
+  }
+
+  // ---------- Tables: hairlines only ----------
+  table {
+    width: 100%;
+    margin: 1.6em 0;
+    border: 0;
+    border-collapse: collapse;
+    font-size: .9em;
+    line-height: 1.55;
+    color: $text-color;
+    font-variant-numeric: tabular-nums;
+
+    tr, tr:nth-child(even) { background: transparent; }
+
+    th, td {
+      border: 0;
+      border-bottom: 1px solid $border-color-01;
+      padding: .55em .9em;
+      vertical-align: top;
+    }
+    th:first-child, td:first-child { padding-left: 0; }
+    th:last-child,  td:last-child  { padding-right: 0; }
+
+    th {
+      background: transparent;
+      font-weight: 600;
+      color: $heading-color;
+      border-bottom: 1px solid $border-color-03;
+      white-space: nowrap;
+    }
+    tbody tr:last-child td { border-bottom: 1px solid $border-color-02; }
+
+    @include media-query($on-laptop) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @include media-query($on-palm) {
+      font-size: .84em;
+      th, td { padding: .5em .7em; }
+      // keep short labels whole (first column is a row label, never break it);
+      // the last column (usually prose) wraps normally
+      td:first-child { white-space: nowrap; }
+      td:not(:last-child) { word-break: keep-all; }
+    }
+  }
 }
 
-code, pre {
-  font-size: .88em;
-}
+// ---------- Code ----------
 
-pre, code {
+code {
+  font-size: .86em;
   border: 0;
+}
+
+code.highlighter-rouge {
+  font-size: .86em;
+  padding: .1em .35em;
+  border: 0;
+  border-radius: 3px;
+  background: $code-background-color;
+}
+
+div.highlight, figure.highlight {
+  margin: 1.4em 0;
+  border: 0;
+  border-radius: 6px;
+}
+
+pre {
+  font-size: .82rem;
+  line-height: 1.65;
+  padding: 1em 1.2em;
+  border: 0;
+  border-radius: 6px;
+  color: $text-color;
+  tab-size: 4;
+
+  > code { font-size: 1em; }
+}
+
+// Syntax palette tuned to the paper/ink skin (overrides minima's GitHub-like colors).
+:root {
+  --hl-text:    #2e2b27;
+  --hl-comment: #9a948a;
+  --hl-keyword: #a2452f;
+  --hl-string:  #4d7a2a;
+  --hl-number:  #2a5d84;
+  --hl-func:    #6a4a99;
+  --hl-type:    #8a5a14;
+  --hl-attr:    #2a6e73;
+  --hl-var:     #8a4a6b;
+  --hl-punct:   #6f6a62;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hl-text:    #d9d4cc;
+    --hl-comment: #8c867c;
+    --hl-keyword: #e08a72;
+    --hl-string:  #a7c080;
+    --hl-number:  #8fb8db;
+    --hl-func:    #c3a6e6;
+    --hl-type:    #e0b872;
+    --hl-attr:    #7fc4c0;
+    --hl-var:     #e0a3c2;
+    --hl-punct:   #a69f95;
+  }
+}
+
+.highlight {
+  color: var(--hl-text);
+  background: $code-background-color;
+
+  .n, .nx, .nn, .ni, .nl, .w { color: var(--hl-text); }
+  .c, .c1, .cm, .cp, .cs, .ch, .cd { color: var(--hl-comment); font-style: italic; }
+  .k, .kc, .kd, .kn, .kp, .kr, .ow, .nb, .bp { color: var(--hl-keyword); font-weight: normal; }
+  .kt, .nc, .ne { color: var(--hl-type); font-weight: normal; }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss, .dl { color: var(--hl-string); }
+  .m, .mi, .mf, .mh, .mo, .mb, .il, .no { color: var(--hl-number); }
+  .nf, .fm, .nd { color: var(--hl-func); font-weight: normal; }
+  .na, .nt, .py { color: var(--hl-attr); }
+  .nv, .vc, .vg, .vi, .vm { color: var(--hl-var); }
+  .o, .p { color: var(--hl-punct); font-weight: normal; }
 }
