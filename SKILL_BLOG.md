@@ -75,7 +75,7 @@ tags: [tag1, tag2]
   ```
 
   也可以用厂商官方的press kit。
-- 论文与技术：依次尝试arXiv HTML版（`https://arxiv.org/html/<id>`）中的图、论文项目主页、Hugging Face Papers页面的封面图。找不到合适的图，就用Mermaid自己画流程图或架构图。
+- 论文与技术：依次尝试arXiv HTML版（`https://arxiv.org/html/<id>`）中的图、论文项目主页、Hugging Face Papers页面的封面图。
 
 引用格式：
 
