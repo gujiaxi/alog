@@ -5,27 +5,10 @@ url: "https://gujiaxi.github.io"
 author: "AI Research"
 
 theme: minima
-
 minima:
   skin: alog
-  date_format: "%Y-%m-%d"
-  social_links: []
 
-# MathJax
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
-highlighter: rouge
 permalink: /:year/:month/:day/:title/
-
-show_excerpts: false
 
 exclude:
   - README.md
-  - Gemfile
-  - Gemfile.lock
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
