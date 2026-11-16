@@ -161,8 +161,7 @@ a {
 
 .post-header { margin-bottom: $spacing-unit; }
 
-.post-title,
-.post-content h1 {
+.post-title {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -180,9 +179,8 @@ a {
 .post-content {
   h2 { font-size: 1.3rem; font-weight: 600; margin-top: 2em; }
   h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.6em; }
-  h4 { font-size: 1rem;   font-weight: 600; }
 
-  p, ul, ol, blockquote, pre, table, figure { margin-bottom: 1.15em; }
+  p, ul, ol, blockquote, pre, table { margin-bottom: 1.15em; }
 
   blockquote {
     border-left: 2px solid $border-color-02;
@@ -235,16 +233,6 @@ a {
     em { font-style: normal; }
   }
 
-  figure {
-    margin: 1.8em 0;
-    text-align: center;
-  }
-  figcaption {
-    margin-top: .7em;
-    font-size: .84em;
-    color: $brand-color;
-  }
-
   // ---------- Tables: hairlines only ----------
   table {
     width: 100%;
@@ -276,11 +264,6 @@ a {
     }
     tbody tr:last-child td { border-bottom: 1px solid $border-color-02; }
 
-    @include media-query($on-laptop) {
-      display: block;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
     @include media-query($on-palm) {
       font-size: .84em;
       th, td { padding: .5em .7em; }
@@ -300,9 +283,7 @@ code {
 }
 
 code.highlighter-rouge {
-  font-size: .86em;
   padding: .1em .35em;
-  border: 0;
   border-radius: 3px;
   background: $code-background-color;
 }
