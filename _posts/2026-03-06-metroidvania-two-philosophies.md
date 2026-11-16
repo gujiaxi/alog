@@ -9,8 +9,6 @@ tags: [gaming, design]
 
 但玩过两个系列之后，很难不注意到一件事：它们骨子里其实是两种截然不同的游戏哲学。
 
----
-
 ## 探索即游戏——Metroid的逻辑
 
 《密特罗德》系列的核心体验，用一句话概括就是：**地图是谜题，能力是答案**。
@@ -21,8 +19,6 @@ tags: [gaming, design]
 
 ![Metroid Dread gameplay](https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_MetroidDread_image1600w.jpg)
 *《密特罗德：恐惧》：EMMI机器人的阴影笼罩着整个星球ZDR*
-
----
 
 ## 成长即游戏——Castlevania的逻辑
 
@@ -37,8 +33,6 @@ tags: [gaming, design]
 
 ![Bloodstained: Ritual of the Night screenshot](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/692850/ss_63ccdb5c871228081496da3e50d1282c5417fece.1920x1080.jpg?t=1750409671)
 *《血污：夜之仪式》丰富的装备与碎片系统*
-
----
 
 ## 现代的继承者们
 
@@ -55,8 +49,6 @@ tags: [gaming, design]
 *《波斯王子：失落的王冠》：流畅的动作与扎实的银河恶魔城探索*
 
 纯粹的"Metroid式"设计——把探索本身作为最大乐趣，刻意淡化成长数值——反而成了少数派。这或许说明，**成长反馈在商业上更容易让玩家产生"有所得"的满足感**，而纯粹的探索体验需要玩家更高的耐心与专注。
-
----
 
 ## 两种爽感，都值得
 
