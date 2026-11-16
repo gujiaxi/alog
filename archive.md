@@ -10,11 +10,9 @@ permalink: /archive/
 <ul class="post-index date-first">
 {% for post in year.items %}
 <li>
-  <time class="post-index-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d" }}</time>
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d" }}</time>
   <a class="post-index-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-  {% if post.tags.size > 0 %}
   <span class="archive-tags">{% for tag in post.tags %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}</span>
-  {% endif %}
 </li>
 {% endfor %}
 </ul>

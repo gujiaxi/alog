@@ -30,6 +30,10 @@ body {
   &:hover { color: $text-color; }
 }
 
+// phone menu glyphs; minima draws them with Font Awesome, which we don't load
+.site-nav #nav-trigger ~ label[for=nav-trigger] .menu-icon::before { content: "☰"; font-family: inherit; }
+.site-nav #nav-trigger:checked ~ label[for=nav-trigger] .menu-icon::before { content: "✕"; }
+
 .page-content {
   padding: $spacing-unit * 1.25 0 $spacing-unit * 2;
 }
@@ -39,10 +43,6 @@ body {
   padding: $spacing-unit * .75 0;
   font-size: .85rem;
   color: $brand-color;
-
-  // the site description already opens the home page; keep the footer to links only
-  .footer-col-wrapper { display: none; }
-  .social-links { margin-top: 0; }
 }
 
 // ---------- Links: ink-colored with a light underline ----------
@@ -102,7 +102,7 @@ a {
     transform: translateY(-.3em);
   }
 
-  time, .post-index-date {
+  time {
     flex: none;
     font-family: $code-font-family;
     font-size: .8em;
@@ -123,13 +123,9 @@ a {
     padding: .35em 0;
   }
   .post-index .post-index-leader { display: none; }
-  .post-index:not(.date-first) time { order: 2; }
   .post-index.date-first .post-index-title { order: -1; }
   .archive-tags { margin-left: 0; }
   .archive-tags a:first-child { margin-left: 0; }
-}
-
-@media screen and (max-width: $on-palm) {
   .site-header { padding-top: $spacing-unit * .5; }
   .site-nav { top: $spacing-unit * .5 + 8px; }
 }

@@ -3,13 +3,7 @@ layout: base
 ---
 
 <div class="home">
-  {%- if site.description -%}
-    <p class="home-intro">{{ site.description | escape }}</p>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
+  <p class="home-intro">{{ site.description | escape }}</p>
   <ul class="post-index">
     {%- for post in site.posts -%}
     <li>
@@ -19,5 +13,4 @@ layout: base
     </li>
     {%- endfor -%}
   </ul>
-  {%- endif -%}
 </div>
