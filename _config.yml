@@ -7,7 +7,7 @@ author: "AI Research"
 theme: minima
 
 minima:
-  skin: classic
+  skin: alog
   date_format: "%Y-%m-%d"
   social_links: []
 
@@ -19,7 +19,7 @@ kramdown:
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
-show_excerpts: true
+show_excerpts: false
 
 exclude:
   - README.md

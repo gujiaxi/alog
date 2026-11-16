@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// Alog skin: warm paper, quiet ink, one restrained accent.
+// Follows the system light/dark preference via minima's auto skin.
+
+$lm-brand-color:           #8a857d;
+$lm-site-title-color:      #23211e;
+$lm-heading-color:         #1f1d1a;
+$lm-text-color:            #2e2b27;
+$lm-background-color:      #faf8f4;
+$lm-code-background-color: #f1eee8;
+$lm-link-base-color:       #2e2b27;
+$lm-link-visited-color:    #6f6a62;
+$lm-link-hover-color:      #2a5d84;
+$lm-border-color-01:       #e6e1d8;
+$lm-border-color-02:       #d6d0c5;
+$lm-border-color-03:       #8a857d;
+$lm-table-zebra-color:     #f4f1ec;
+$lm-table-header-bg-color: #efebe4;
+$lm-table-header-border:   #ddd7cc;
+
+$dm-brand-color:           #8f8a82;
+$dm-site-title-color:      #ece8e1;
+$dm-heading-color:         #ece8e1;
+$dm-text-color:            #d9d4cc;
+$dm-background-color:      #1b1a18;
+$dm-code-background-color: #252321;
+$dm-link-base-color:       #d9d4cc;
+$dm-link-visited-color:    #9d978e;
+$dm-link-hover-color:      #8fb8db;
+$dm-border-color-01:       #33302c;
+$dm-border-color-02:       #45413b;
+$dm-border-color-03:       #8f8a82;
+
+@import "minima/skins/auto";
