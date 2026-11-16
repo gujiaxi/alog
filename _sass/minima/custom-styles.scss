@@ -199,10 +199,7 @@ a {
   }
 
   // ---------- Images & captions ----------
-  // Two caption forms are supported:
-  //   ![alt](url)            ![alt](url)
-  //   *说明*                  (blank line)
-  //                          *说明*
+  // caption: an *emphasized* line right under the image (same paragraph)
   img {
     display: block;
     margin: 0 auto;
@@ -214,23 +211,14 @@ a {
     text-align: center;
   }
 
-  // caption in the same paragraph as the image
-  p:has(> img) > em,
-  // caption as the paragraph right after the image
-  p:has(> img) + p:has(> em:only-child) {
+  p:has(> img) > em {
     display: block;
     margin: .7em auto 0;
     max-width: 34em;
-    text-align: center;
     font-style: normal;
     font-size: .84em;
     line-height: 1.65;
     color: $brand-color;
-  }
-  p:has(> img) + p:has(> em:only-child) {
-    margin-top: -.9em;
-    margin-bottom: 1.8em;
-    em { font-style: normal; }
   }
 
   // ---------- Tables: hairlines only ----------
